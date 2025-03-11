@@ -63,7 +63,7 @@ public class Veiculo implements Cores, Imposto {
      */
     @Override
     public void setCor(String cor) {
-        if (cor == null || cor.isEmpty()) {
+        if (cor != AZUL && cor != VERDE && cor !=CINZENTO && cor !=VERMELHO ||  cor.isEmpty()) {
             throw new IllegalArgumentException("A cor não pode ser vazia.");
         }
         this.cor = cor;
